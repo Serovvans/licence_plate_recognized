@@ -5,6 +5,10 @@ setup:
 update-env:
 	conda env update -f environment.yml --prune
 
+cuda-install:
+	pip install torch==2.2.2+cu121 torchvision==0.17.2+cu121 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
+	pip install "numpy<2" --force-reinstall
+
 download:
 	python scripts/download_data.py
 

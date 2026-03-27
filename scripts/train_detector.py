@@ -16,6 +16,8 @@ def main():
         seed=cfg.seed,
         project="runs/detect",
         name="hk_plates_v1",
+        workers=cfg.training.workers,
+        cache=cfg.training.cache,
     )
 
 

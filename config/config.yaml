@@ -1,6 +1,6 @@
 # сиды, девайс, пути
 seed: 42
-device: mps
+device: cuda
 
 data:
   images_path: data/raw/data_jpg/images
@@ -14,9 +14,11 @@ data:
   raw_path: data/raw
 
 training:
-  epochs: 5
+  epochs: 150
   batch_size: 16
   model: "yolo26n.pt"
+  workers: 4
+  cache: false
 
 inference:
   weights: runs/detect/runs/detect/hk_plates_v13/weights/best.pt
