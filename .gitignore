@@ -1,0 +1,24 @@
+# Данные и модели — только через DVC
+data/
+checkpoints/
+runs/
+*.pt
+*.onnx
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Инструменты
+.wandb/
+lightning_logs/
+*.log
+
+# OS
+.DS_Store

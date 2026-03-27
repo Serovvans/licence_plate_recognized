@@ -1,0 +1,21 @@
+# сиды, девайс, пути
+seed: 42
+device: mps
+
+data:
+  images_path: data/raw/data_jpg/images
+  annotations_path: data/raw/data_jpg/annotation/train_final_annot.txt
+  img_size: 640
+
+  yolo_dataset_path: data/processed/detector
+  yolo_dataset_config: config/training/yolo_dataset.yaml
+
+training:
+  epochs: 5
+  batch_size: 16
+  model: "yolo26n.pt"
+
+inference:
+  weights: runs/detect/runs/detect/hk_plates_v13/weights/best.pt
+  images_path: data/raw/data_jpg/images/test
+  output_path: data/predictions.txt

@@ -1,0 +1,5 @@
+names:
+  '0': plate
+path: /Users/ivan/Desktop/Projects/KarpovCoursesCV/license_plate_recognition/data/processed/detector
+train: images/train
+val: images/val
