@@ -5,6 +5,9 @@ setup:
 update-env:
 	conda env update -f environment.yml --prune
 
+download:
+	python scripts/download_data.py
+
 dataset_detection:
 	python scripts/prepare_detection_data.py
 

@@ -10,6 +10,9 @@ data:
   yolo_dataset_path: data/processed/detector
   yolo_dataset_config: config/training/yolo_dataset.yaml
 
+  gdrive_url: "https://drive.google.com/file/d/1Rd1yCiRSL2Xpbv2axhs0QzZxhBZFhFIL/view?usp=drive_link"
+  raw_path: data/raw
+
 training:
   epochs: 5
   batch_size: 16

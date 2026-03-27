@@ -16,3 +16,4 @@ dependencies:
       - opencv-python
       - omegaconf
       - "numpy<2"
+      - gdown
