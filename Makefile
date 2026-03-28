@@ -11,7 +11,7 @@ update-env:
 	conda env update -f environment.yml --prune
 
 cuda-install:
-	pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
+	pip install torch torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
 	pip install "numpy<2" --force-reinstall
 
 download:
