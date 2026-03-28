@@ -9,8 +9,8 @@ model:
   max_length: 16
 
 training:
-  device: "mps"
+  device: "cuda"
   batch_size: 4
-  epochs: 1
+  epochs: 5
   lr: 5.0e-5
   output_dir: "checkpoints/trocr"

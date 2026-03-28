@@ -19,7 +19,8 @@ def main():
     dataset = dataset.train_test_split(test_size=1 - cfg.data.train_split)
 
     processor = TrOCRProcessor.from_pretrained(cfg.model.name)
-    model = VisionEncoderDecoderModel.from_pretrained(cfg.model.name)
+    model = VisionEncoderDecoderModel.from_pretrained(cfg.model.name, low_cpu_mem_usage=False)
+    model = model.to(cfg.training.device)
 
     model.config.decoder_start_token_id = processor.tokenizer.cls_token_id
     model.config.pad_token_id = processor.tokenizer.pad_token_id

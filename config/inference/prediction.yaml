@@ -3,10 +3,10 @@ gpu: false
 preprocessing: true
 
 images_path: data/raw/data_jpg/images/
-annotations_path: data/predictions/detection/predictions_v3.txt
-output_path: data/predictions/ocr/predictions_trocr.txt
+annotations_path: data/predictions/detection/predictions_v4.txt
+output_path: data/predictions/ocr/predictions_trocr_v7.txt
 
 recognizer: trocr  # easyocr | trocr
 
 trocr_model_path: "checkpoints/trocr/final"
-device: "mps"
+device: "cuda"

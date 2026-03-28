@@ -14,7 +14,9 @@ def load_annotations(annotations_path: Path) -> dict:
             img_rel_path, x1, y1, x2, y2 = (
                 row[0], int(row[1]), int(row[2]), int(row[3]), int(row[4])
             )
-            image_to_boxes.setdefault(img_rel_path, []).append((x1, y1, x2, y2))
+            conf = float(row[5])
+            if  conf > 0.85:
+                image_to_boxes.setdefault(img_rel_path, []).append((x1, y1, x2, y2))
     return image_to_boxes
 
 

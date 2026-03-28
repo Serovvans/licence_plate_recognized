@@ -1,7 +1,6 @@
-install conda:
+install-conda:
 	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 	bash Miniconda3-latest-Linux-x86_64.sh
-	source ~/.bashrc
 
 setup:
 	conda env create -f environment.yml
@@ -11,7 +10,7 @@ update-env:
 	conda env update -f environment.yml --prune
 
 cuda-install:
-	pip install torch torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
+	pip install "torch==2.4.0" torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
 	pip install "numpy<2" --force-reinstall
 
 download:
