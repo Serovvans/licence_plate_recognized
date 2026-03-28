@@ -1,0 +1,16 @@
+data:
+  raw_images_path: "data/raw/data_jpg/images"
+  raw_annotations_path: "data/raw/data_jpg/annotation/train_final_annot.txt"
+  processed_output_path: "data/processed/trocr"
+  train_split: 0.9
+
+model:
+  name: "microsoft/trocr-base-printed"
+  max_length: 16
+
+training:
+  device: "mps"
+  batch_size: 4
+  epochs: 1
+  lr: 5.0e-5
+  output_dir: "checkpoints/trocr"

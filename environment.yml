@@ -5,8 +5,8 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - pytorch=2.2
-  - torchvision=0.17
+  - pytorch>=2.4
+  - torchvision>=0.19
   - pip:
       - ultralytics
       - albumentations
@@ -17,3 +17,7 @@ dependencies:
       - omegaconf
       - "numpy<2"
       - gdown
+      - easyocr
+      - pandas
+      - datasets
+      - transformers

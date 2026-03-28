@@ -16,7 +16,7 @@ data:
 training:
   epochs: 150
   batch_size: 16
-  model: "yolo26n.pt"
+  model: "yolo26m.pt"
   workers: 4
   cache: false
 

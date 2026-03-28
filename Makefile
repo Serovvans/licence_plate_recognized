@@ -11,7 +11,7 @@ update-env:
 	conda env update -f environment.yml --prune
 
 cuda-install:
-	pip install torch==2.2.2+cu121 torchvision==0.17.2+cu121 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
+	pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu121 --force-reinstall
 	pip install "numpy<2" --force-reinstall
 
 download:
@@ -25,3 +25,15 @@ train-detector:
 
 predict:
 	python scripts/predict_detector.py
+
+predict-ocr:
+	python scripts/predict_ocr.py
+
+data-trocr:
+	python scripts/prepare_trocr_data.py
+
+train-trocr:
+	python scripts/train_trocr.py
+
+predict-trocr:
+	python scripts/predict_trocr.py

@@ -1,0 +1,12 @@
+languages: ['ch_sim', 'en']
+gpu: false
+preprocessing: true
+
+images_path: data/raw/data_jpg/images/
+annotations_path: data/predictions/detection/predictions_v3.txt
+output_path: data/predictions/ocr/predictions_trocr.txt
+
+recognizer: trocr  # easyocr | trocr
+
+trocr_model_path: "checkpoints/trocr/final"
+device: "mps"
